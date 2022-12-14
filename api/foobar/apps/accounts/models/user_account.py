@@ -76,4 +76,4 @@ class UserAccount(PermissionsMixin, CoreModel, AbstractBaseUser):
         return salutation
 
     def do_thing(self):
-        return 301
+        return 300
