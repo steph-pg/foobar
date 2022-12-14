@@ -5,11 +5,7 @@ from django.core.exceptions import ValidationError as DjangoValidationError
 from django.core.signing import BadSignature, SignatureExpired, TimestampSigner
 from django.utils.translation import gettext
 
-from foobar.apps.accounts.exceptions import (
-    InvalidPasswordError,
-    InvalidResetPasswordSignatureError,
-    WrongPasswordError,
-)
+from foobar.apps.accounts.exceptions import InvalidPasswordError, InvalidResetPasswordSignatureError, WrongPasswordError
 from foobar.apps.accounts.models import UserAccount
 
 

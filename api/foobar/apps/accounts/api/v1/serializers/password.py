@@ -1,11 +1,7 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
-from foobar.apps.accounts.exceptions import (
-    InvalidPasswordError,
-    InvalidResetPasswordSignatureError,
-    WrongPasswordError,
-)
+from foobar.apps.accounts.exceptions import InvalidPasswordError, InvalidResetPasswordSignatureError, WrongPasswordError
 from foobar.apps.accounts.services.password import PasswordService
 
 

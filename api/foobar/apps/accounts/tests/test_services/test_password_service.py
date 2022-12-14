@@ -6,11 +6,7 @@ from django.core.signing import BadSignature, SignatureExpired, TimestampSigner
 
 import pytest
 
-from foobar.apps.accounts.exceptions import (
-    InvalidPasswordError,
-    InvalidResetPasswordSignatureError,
-    WrongPasswordError,
-)
+from foobar.apps.accounts.exceptions import InvalidPasswordError, InvalidResetPasswordSignatureError, WrongPasswordError
 from foobar.apps.accounts.models import UserAccount
 from foobar.apps.accounts.services.password import PasswordService
 
