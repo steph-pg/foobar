@@ -24,8 +24,8 @@ jobs:
       working-directory: api
       run: |
         isort --check .
-        pylama
-        black --check .
+        # pylama
+        # black --check .
 test-python:
     runs-on: ubuntu-latest
     env:
