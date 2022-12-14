@@ -65,7 +65,7 @@ jobs:
           working-directory: api
           env:
             DEBUG: "0"
-            DJANGO_SECRET_KEY: ${{ env.DJANGO_SECRET_KEY }}
+            FOOBAR_SECRET_KEY: ${{ env.DJANGO_SECRET_KEY }}
             DB_USERNAME: ${{ env.POSTGRES_USER }}
             DB_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
             DB_HOST: ${{ env.POSTGRES_HOST }}
