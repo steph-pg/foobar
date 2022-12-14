@@ -5,7 +5,7 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from ..environment import env
 
 
-USE_SENTRY = env.bool("FOOBAR_USE_SENTRY", default=True)
+USE_SENTRY = env.bool("FOOBAR_USE_SENTRY", default=False)
 if USE_SENTRY:  # pragma: no cover
     sentry_kwargs = {
         "dsn": env.str("FOOBAR_SENTRY_DSN"),
