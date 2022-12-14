@@ -57,10 +57,11 @@ jobs:
           with:
             python-version: "3.11.1"
         - name: Install requirements
+          working-directory: api
           run: |
             pip install -r requirements-dev.txt
         - name: Run Tests
-          # Step specific environment variables
+          working-directory: api
           env:
             DEBUG: "0"
             DJANGO_SECRET_KEY: ${{ env.DJANGO_SECRET_KEY }}
