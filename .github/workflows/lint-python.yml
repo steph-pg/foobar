@@ -27,6 +27,7 @@ jobs:
         # pylama
         # black --check .
   test-python:
+      needs: lint-python
       runs-on: ubuntu-latest
       env:
         POSTGRES_USER: postgres

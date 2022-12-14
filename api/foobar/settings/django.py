@@ -16,7 +16,7 @@ INTERNAL_IPS = env.list("FOOBAR_INTERNAL_IPS", default=[])
 
 ALLOWED_HOSTS = env.list("FOOBAR_ALLOWED_HOSTS", default=[])
 
-SECRET_KEY = env.str("FOOBAR_SECRET_KEY")
+SECRET_KEY = env.str("FOOBAR_SECRET_KEY", default="secret")
 
 INSTALLED_APPS = [
     # django apps
@@ -102,10 +102,10 @@ MEDIA_ROOT = env.str("FOOBAR_MEDIA_ROOT", rel("..", "..", "public", "media"))
 
 EMAIL_BACKEND = env.str("FOOBAR_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
 if EMAIL_BACKEND == "django.core.mail.backends.smtp.EmailBackend":  # pragma: no cover
-    EMAIL_HOST = env.str("FOOBAR_EMAIL_HOST")
-    EMAIL_PORT = env.str("FOOBAR_EMAIL_PORT")
-    EMAIL_HOST_USER = env.str("FOOBAR_EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = env.str("FOOBAR_EMAIL_HOST_PASSWORD")
+    EMAIL_HOST = env.str("FOOBAR_EMAIL_HOST", default="example.com")
+    EMAIL_PORT = env.str("FOOBAR_EMAIL_PORT", default="2020")
+    EMAIL_HOST_USER = env.str("FOOBAR_EMAIL_HOST_USER", default="user")
+    EMAIL_HOST_PASSWORD = env.str("FOOBAR_EMAIL_HOST_PASSWORD", default="password")
     EMAIL_USE_TLS = env.bool("FOOBAR_EMAIL_USE_TLS", default=True)
 
 SITE_ID = env.int("FOOBAR_SITE_ID", default=1)
