@@ -74,3 +74,6 @@ class UserAccount(PermissionsMixin, CoreModel, AbstractBaseUser):
         else:
             salutation = gettext_lazy("Dear client")
         return salutation
+
+    def do_thing(self):
+        return 300
