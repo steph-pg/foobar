@@ -16,6 +16,7 @@ jobs:
       with:
          python-version: '3.11.1'
          cache: 'pip' # caching pip dependencies
+         cache-dependency-path: '**/requirements-dev.txt'
     - name: Install dependencies
       working-directory: api
       run: |
