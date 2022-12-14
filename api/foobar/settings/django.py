@@ -67,7 +67,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "foobar.wsgi.application"
 
-DATABASES = {"default": env.db("FOOBAR_DATABASE_URL", default="psql://postgres:1234@database:5432/foobar_db")}
+DATABASES = {"default": env.db("FOOBAR_DATABASE_URL", default="psql://postgres:1234@localhost:5432/foobar_db")}
 
 AUTH_USER_MODEL = "accounts.UserAccount"
 AUTH_PASSWORD_VALIDATORS = [
