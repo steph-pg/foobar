@@ -31,11 +31,11 @@ jobs:
       runs-on: ubuntu-latest
 
       env:
-        FOOBAR_POSTGRES_USER: postgres
-        FOOBAR_POSTGRES_PASSWORD: 1234
-        # FOOBAR_POSTGRES_HOST: localhost
-        FOOBAR_POSTGRES_DB: foobar_db
-        # FOOBAR_POSTGRES_PORT: 5432
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 1234
+        # POSTGRES_HOST: localhost
+        POSTGRES_DB: foobar_db
+        # POSTGRES_PORT: 5432
 
         # FOOBAR_SECRET_KEY: test-key
       services:
