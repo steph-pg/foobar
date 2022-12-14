@@ -29,20 +29,21 @@ jobs:
   test-python:
       needs: lint-python
       runs-on: ubuntu-latest
-      env:
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: 1234
-        POSTGRES_HOST: localhost
-        POSTGRES_DB: foobar_db
-        POSTGRES_PORT: 5432
-        DJANGO_SECRET_KEY: test-key
+
+      # env:
+      #   POSTGRES_USER: postgres
+      #   POSTGRES_PASSWORD: 1234
+      #   POSTGRES_HOST: localhost
+      #   POSTGRES_DB: foobar_db
+      #   POSTGRES_PORT: 5432
+      #   DJANGO_SECRET_KEY: test-key
       services:
         postgres_main:
           image: postgres:12
-          env:
-            POSTGRES_USER: ${{ env.POSTGRES_USER }}
-            POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
-            POSTGRES_DB: ${{ env.POSTGRES_DB }}
+          # env:
+          #   POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          #   POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          #   POSTGRES_DB: ${{ env.POSTGRES_DB }}
           ports:
             - 5432:5432
           options: >-
@@ -57,6 +58,9 @@ jobs:
           uses: actions/setup-python@v4
           with:
             python-version: "3.11.1"
+        - name: Prepare
+          working-directory: api
+          run: cp .env.example .env
         - name: Install requirements
           working-directory: api
           run: |
