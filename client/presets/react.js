@@ -1,3 +1,4 @@
+// test
 import { group, babel } from 'webpack-blocks'
 
 
