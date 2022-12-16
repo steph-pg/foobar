@@ -3,6 +3,7 @@ smoothScroll.polyfill()
 
 // should be after React import for IE11
 // 'require' used because inside condition
+// test
 if(!!window.MSInputMethodContext && !!document.documentMode) { // IE11 check
   require('whatwg-fetch')
 
