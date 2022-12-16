@@ -3,7 +3,7 @@ name: Run python linters
 on:
   pull_request:
     branches:
-      - master
+      - development
     paths:
       - '**/*.py'
 
@@ -42,7 +42,7 @@ jobs:
         # FOOBAR_SECRET_KEY: test-key
       services:
         postgres_main:
-          image: postgres:12
+          image: postgres:15.1-alpine
           env:
             POSTGRES_USER: ${{ env.POSTGRES_USER }}
             POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
